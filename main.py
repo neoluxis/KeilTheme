@@ -12,9 +12,10 @@ from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.QtCore import Qt
 from PyQt6.uic import loadUi
 
+BASE_DIR = os.path.dirname(os.path.abspath(sys.argv[0]))  
 
 class KeilThemer(QWidget):
-    THEME_FOLDER = "./themes"
+    THEME_FOLDER = os.path.join(BASE_DIR, "themes")
 
     def __init__(self):
         super().__init__()
@@ -25,8 +26,10 @@ class KeilThemer(QWidget):
 
         # 加载 UI 文件
         loadUi("KeilThemer.ui", self)
+        # loadUi(os.path.join(BASE_DIR, "KeilThemer.ui"), self)
+
         self.setWindowTitle("Keil Theme")
-        self.setWindowIcon(QIcon("icon.jpeg"))
+        self.setWindowIcon(QIcon(os.path.join(BASE_DIR, "icon.jpeg")))
 
         # 主题相关变量
         self.themes = []
