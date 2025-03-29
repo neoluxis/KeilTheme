@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>keilThemer</class>
+ <widget class="QWidget" name="keilThemer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>773</width>
+    <height>498</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>330</y>
+     <width>231</width>
+     <height>164</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="buttons">
+    <item>
+     <widget class="QPushButton" name="btnListRefresh">
+      <property name="text">
+       <string>刷新列表</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLineEdit" name="nameCreate">
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>输入保存名称</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnThemeCreate">
+        <property name="text">
+         <string>保存当前主题配置</string>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnThemeEffect">
+      <property name="text">
+       <string>应用主题</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnThemeReset">
+      <property name="text">
+       <string>重置默认</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>80</y>
+     <width>231</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="vertThemeList">
+    <item>
+     <widget class="QLabel" name="labelThemeList">
+      <property name="focusPolicy">
+       <enum>Qt::FocusPolicy::NoFocus</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string>主题列表</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="listThemes"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>481</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="vertPreview">
+    <item>
+     <widget class="QLabel" name="labelPreview">
+      <property name="text">
+       <string>Preview</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>731</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0">
+    <item>
+     <widget class="QLabel" name="labelMDK">
+      <property name="text">
+       <string>请配置 Keil MDK 安装文件夹</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="setMDK">
+      <property name="text">
+       <string>选择 Keil MDK 安装目录</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnThemeCreate</sender>
+   <signal>clicked()</signal>
+   <receiver>keilThemer</receiver>
+   <slot>on_btn_themeCreate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>635</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnListRefresh</sender>
+   <signal>clicked()</signal>
+   <receiver>keilThemer</receiver>
+   <slot>on_btn_listRefresh()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>635</x>
+     <y>284</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnThemeEffect</sender>
+   <signal>clicked()</signal>
+   <receiver>keilThemer</receiver>
+   <slot>on_btn_themeEffect()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>635</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnThemeReset</sender>
+   <signal>clicked()</signal>
+   <receiver>keilThemer</receiver>
+   <slot>on_btn_themeReset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>635</x>
+     <y>425</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listThemes</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>keilThemer</receiver>
+   <slot>on_list_selection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>635</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>setMDK</sender>
+   <signal>clicked()</signal>
+   <receiver>keilThemer</receiver>
+   <slot>set_mdk_path()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>671</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_btn_themeCreate()</slot>
+  <slot>on_btn_themeEffect()</slot>
+  <slot>on_btn_themeReset()</slot>
+  <slot>on_btn_listRefresh()</slot>
+  <slot>on_list_selection()</slot>
+  <slot>set_mdk_path()</slot>
+ </slots>
+</ui>
