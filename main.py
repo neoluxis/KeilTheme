@@ -1,7 +1,6 @@
 import sys
 import os
 import json
-import cv2 as cv
 from PyQt6.QtWidgets import (
     QApplication,
     QWidget,
@@ -77,6 +76,10 @@ class KeilThemer(QWidget):
 
     def on_btn_themeCreate(self):
         """创建新主题"""
+        if not self.target:
+            QMessageBox.information(self, "错误", "请配置 Keil 路径")
+            return
+            
         name = self.nameCreate.text().strip()
         if not name:
             QMessageBox.warning(self, "错误", "请输入主题名称")
@@ -93,31 +96,39 @@ class KeilThemer(QWidget):
                 theme_conf = f.read()
             with open(os.path.join(theme_path, "global.prop"), "w") as f:
                 f.write(theme_conf)
-
-        QMessageBox.information(self, "提示", "主题创建成功")
+            QMessageBox.information(self, "提示", "主题创建成功")
+        else: 
+            QMessageBox.information(self, "错误", "主题创建失败")
         self.list_refresh()
 
     def on_btn_themeEffect(self):
         """应用当前选中的主题"""
+        if not self.target:
+            QMessageBox.information(self, "错误", "请配置 Keil 路径")
+            return
+            
         print(f"应用主题: {self.theme}")
         if self.theme_conf_path and os.path.exists(self.theme_conf_path):
             with open(self.theme_conf_path, "r") as f:
                 theme_conf = f.read()
             with open(self.target, "w") as f:
                 f.write(theme_conf)
-            QMessageBox.information(self, "提示", "主题应用成功")
+            QMessageBox.information(self, "提示", "主题应用成功:重启 Keil 生效")
         else:
             QMessageBox.warning(self, "错误", "没有找到主题配置文件")
 
     def on_btn_themeReset(self):
         """重置为默认主题"""
+        if not self.target:
+            QMessageBox.information(self, "错误", "请配置 Keil 路径")
+            return
         self.theme_conf_path = os.path.join(self.THEME_FOLDER, "default", "global.prop")
         if os.path.exists(self.theme_conf_path):
             with open(self.theme_conf_path, "r") as f:
                 theme_conf = f.read()
             with open(self.target, "w") as f:
                 f.write(theme_conf)
-            QMessageBox.information(self, "提示", "主题重置成功")
+            QMessageBox.information(self, "提示", "主题重置成功:重启 Keil 生效")
         else:
             QMessageBox.warning(self, "错误", "没有找到默认主题配置文件")
 
@@ -150,7 +161,7 @@ class KeilThemer(QWidget):
         path = QFileDialog.getExistingDirectory(self, "选择 MDK 安装路径")
         if path and os.path.exists(os.path.join(path, "UV4")):
             self.labelMDK.setText(path)
-            with open("config.json", "w") as f:
+            with open(os.path.join(BASE_DIR, "config.json"), "w") as f:
                 json.dump({"mdk_path": path}, f)
         else:
             QMessageBox.warning(self, "错误", "选择的路径不正确, 请重新选择")
@@ -158,12 +169,15 @@ class KeilThemer(QWidget):
 
     def load_mdk_path(self):
         """加载 MDK 安装路径"""
-        if os.path.exists("config.json"):
-            with open("config.json", "r") as f:
+        if os.path.exists(os.path.join(BASE_DIR, "config.json")):
+            with open(os.path.join(BASE_DIR, "config.json"), "r") as f:
                 config = json.load(f)
             self.mdk_path = config.get("mdk_path", None)
             if self.mdk_path and os.path.exists(os.path.join(self.mdk_path, "UV4")):
                 self.labelMDK.setText(self.mdk_path)
+                self.target = (
+                    os.path.join(self.mdk_path, "UV4", "global.prop") if self.mdk_path else None
+                )
             else:
                 self.labelMDK.setText("没有选择路径")
                 QMessageBox.warning(self, "错误", "MDK 路径不正确, 请重新设置")
