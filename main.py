@@ -159,7 +159,11 @@ class KeilThemer(QWidget):
             with open("config.json", "r") as f:
                 config = json.load(f)
             self.mdk_path = config.get("mdk_path", None)
-            self.labelMDK.setText(self.mdk_path if self.mdk_path else "没有选择路径")
+            if self.mdk_path and os.path.exists(os.path.join(self.mdk_path, "UV4")):
+                self.labelMDK.setText(self.mdk_path)
+            else:
+                self.labelMDK.setText("没有选择路径")
+                QMessageBox.warning(self, "错误", "MDK 路径不正确, 请重新设置")
         else:
             self.labelMDK.setText("没有选择路径")
 
