@@ -59,10 +59,10 @@ edge.column=80
 
 
 # Specification for text selection and caret line
-selection.fore=#000000
-selection.back=#86C7F7
-caret.fore=#000000
-caret.back=#DEFEE6
+selection.fore=#FFFFFF
+selection.back=#264F78
+caret.fore=#FFFFFF
+caret.back=#424242
 
 # Color for vertical edge
 edge.colour=#66FAFA
@@ -80,20 +80,20 @@ template.cpp="#define","#define |";"#if","#if |\r\n\r\n#endif";\\
 font.monospace.cpp=DejaVu Sans Mono
 font.acpmonofontname.cpp=DejaVu Sans Mono
 font.acppropfontname.cpp=DejaVu Sans Mono
-style.cpp.32=font:DejaVu Sans Mono,size:16,fore:#000000,back:#FFFFFF
-style.cpp.4=font:DejaVu Sans Mono,size:16,fore:#007F7F,back:#FFFFFF
-style.cpp.10=font:DejaVu Sans Mono,size:16,fore:#000000,back:#FFFFFF
-style.cpp.1=font:DejaVu Sans Mono,size:16,fore:#007F00,back:#FFFFFF
-style.cpp.2=font:DejaVu Sans Mono,size:16,fore:#007F00,back:#FFFFFF
-style.cpp.5=font:DejaVu Sans Mono,size:16,fore:#0000FF,back:#FFFFFF
-style.cpp.6=font:DejaVu Sans Mono,size:16,fore:#7F007F,back:#FFFFFF
-style.cpp.11=font:DejaVu Sans Mono,size:16,fore:#000000,back:#FFFFFF
-style.cpp.9=font:DejaVu Sans Mono,size:16,fore:#7F7F00,back:#FFFFFF
-style.cpp.7=font:DejaVu Sans Mono,size:16,fore:#7F007F,back:#FFFFFF
-style.cpp.34=font:DejaVu Sans Mono,size:16,fore:#500000,back:#20FFFF
-style.cpp.35=font:DejaVu Sans Mono,size:16,fore:#FF0000,back:#FFFFFF
-style.cpp.16=font:DejaVu Sans Mono,size:16,fore:#B00040,back:#FFFFFF
-style.cpp.12=font:DejaVu Sans Mono,size:16,fore:#000000,back:#E0C0E0
+style.cpp.32=font:DejaVu Sans Mono,size:16,fore:#FFFFFF,back:#1E1E1E
+style.cpp.4=font:DejaVu Sans Mono,size:16,fore:#B5CEA8,back:#1E1E1E
+style.cpp.10=font:DejaVu Sans Mono,size:16,fore:#FFFFFF,back:#1E1E1E
+style.cpp.1=font:DejaVu Sans Mono,size:16,fore:#007F00,back:#1E1E1E
+style.cpp.2=font:DejaVu Sans Mono,size:16,fore:#007F00,back:#1E1E1E
+style.cpp.5=font:DejaVu Sans Mono,size:16,fore:#569CD6,back:#1E1E1E
+style.cpp.6=font:DejaVu Sans Mono,size:16,fore:#D69D85,back:#1E1E1E
+style.cpp.11=font:DejaVu Sans Mono,size:16,fore:#FFFFFF,back:#1E1E1E
+style.cpp.9=font:DejaVu Sans Mono,size:16,fore:#9B9B9B,back:#1E1E1E
+style.cpp.7=font:DejaVu Sans Mono,size:16,fore:#7F007F,back:#1E1E1E
+style.cpp.34=font:DejaVu Sans Mono,size:16,fore:#500000,back:#1E1E1E
+style.cpp.35=font:DejaVu Sans Mono,size:16,fore:#FF0000,back:#1E1E1E
+style.cpp.16=font:DejaVu Sans Mono,size:16,fore:#B00040,back:#1E1E1E
+style.cpp.12=font:DejaVu Sans Mono,size:16,fore:#FF80C0,back:#1E1E1E
 style.cpp.86=font:DejaVu Sans Mono,size:16,fore:#696969,back:#FFFFFF
 
 
@@ -101,7 +101,7 @@ style.cpp.86=font:DejaVu Sans Mono,size:16,fore:#696969,back:#FFFFFF
 font.monospace.asm=DejaVu Sans Mono
 font.acpmonofontname.asm=DejaVu Sans Mono
 font.acppropfontname.asm=DejaVu Sans Mono
-style.asm.32=font:DejaVu Sans Mono,size:16,fore:#000000,back:#FFFFFF
+style.asm.32=font:DejaVu Sans Mono,size:16,fore:#FFFFFF,back:#1E1E1E
 style.asm.1=font:DejaVu Sans Mono,size:16,fore:#616161,back:#FFFFFF
 style.asm.2=font:DejaVu Sans Mono,size:16,fore:#FF0000,back:#FFFFFF
 style.asm.3=font:DejaVu Sans Mono,size:16,fore:#7F007F,back:#FFFFFF
