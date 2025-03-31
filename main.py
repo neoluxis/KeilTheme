@@ -92,8 +92,12 @@ class KeilThemer(QWidget):
         os.makedirs(theme_path, exist_ok=True)
 
         if self.target and os.path.exists(self.target):
-            with open(self.target, "r") as f:
-                theme_conf = f.read()
+            try:
+                with open(self.target, "r", encoding='utf-8') as f:
+                    theme_conf = f.read()
+            except:
+                with open(self.target, "r", encoding='gbk') as f:
+                    theme_conf = f.read()
             with open(os.path.join(theme_path, "global.prop"), "w") as f:
                 f.write(theme_conf)
             QMessageBox.information(self, "提示", "主题创建成功")

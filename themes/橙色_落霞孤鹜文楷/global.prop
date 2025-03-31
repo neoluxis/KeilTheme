@@ -1,0 +1,118 @@
+# properties for all file types
+indent.automatic=1
+virtual.space=0
+view.whitespace=0
+view.endofline=0
+code.page=65001
+caretline.visible=1
+highlight.matchingbraces=1
+print.syntax.coloring=1
+use.tab.color=1
+create.backup.files=0
+auto.load.ext.modfiles=0
+save.prj.before.dbg=0
+save.files.before.dbg=0
+function.scanner.project=1
+function.scanner.files=1
+function.scanner.modules=1
+
+# properties for c/cpp files
+syntax.colouring.cpp=1
+use.tab.cpp=0
+tabsize.cpp=2
+line.margin.visible.cpp=1
+fold.cpp=1
+monospaced.font.cpp=1
+
+# properties for asm files
+syntax.colouring.asm=1
+use.tab.asm=0
+tabsize.asm=4
+line.margin.visible.asm=1
+monospaced.font.asm=1
+
+# properties for other files
+use.tabs=0
+tabsize=4
+line.margin.visible.txt=0
+monospaced.font.txt=1
+
+# setting for code completion, syntax check and source browser information
+cc.autolist=1
+cc.highlightsyntax=1
+cc.showparameters=1
+cc.triggerlist=1
+cc.triggernumchars=3
+cc.enter.as.fillup=1
+cc.usealpha4inactcode=1
+cc.alphavalue=50
+cc.autoupdbi=1
+cc.updbiinterval=3
+
+# autosave for editor files
+autosave=0
+autosave.interval=5
+
+# vertical edge at right margin
+edge.mode=0
+edge.column=80
+
+
+# Specification for text selection and caret line
+selection.fore=#FFFFFF
+selection.back=#86C7F7
+caret.fore=#000000
+caret.back=#FDF5E3
+
+# Color for vertical edge
+edge.colour=#66FAFA
+
+# C/C++ Editor files
+template.cpp="#define","#define |";"#if","#if |\r\n\r\n#endif";\\
+    
+font.monospace.cpp=LXGW WenKai Mono
+font.acpmonofontname.cpp=LXGW WenKai Mono
+font.acppropfontname.cpp=LXGW WenKai Mono
+style.cpp.32=font:LXGW WenKai Mono,size:18,fore:#C0C0C0,back:#FDF5E3
+style.cpp.4=font:LXGW WenKai Mono,size:18,fore:#6F3700,back:#FDF5E3,bold
+style.cpp.10=font:LXGW WenKai Mono,size:18,fore:#2A2A2A,back:#FDF5E3,bold
+style.cpp.1=font:LXGW WenKai Mono,size:18,fore:#777777,back:#FDF5E3
+style.cpp.2=font:LXGW WenKai Mono,size:18,fore:#6B6B6B,back:#FDF5E3
+style.cpp.5=font:LXGW WenKai Mono,size:18,fore:#626200,back:#FDF5E3,bold,italics
+style.cpp.6=font:LXGW WenKai Mono,size:18,fore:#008070,back:#FDF5E3,bold
+style.cpp.11=font:LXGW WenKai Mono,size:18,fore:#26272B,back:#FDF5E3,bold
+style.cpp.9=font:LXGW WenKai Mono,size:18,fore:#804040,back:#FDF5E3,bold
+style.cpp.7=font:LXGW WenKai Mono,size:18,fore:#7F007F,back:#FDF5E3
+style.cpp.34=font:LXGW WenKai Mono,size:18,fore:#500000,back:#20FFFF
+style.cpp.35=font:LXGW WenKai Mono,size:18,fore:#FF0000,back:#FDF5E3
+style.cpp.18=font:LXGW WenKai Mono,size:18,fore:#B00040,back:#FDF5E3
+style.cpp.12=font:LXGW WenKai Mono,size:18,fore:#000000,back:#E0C0E0
+style.cpp.86=font:LXGW WenKai Mono,size:18,fore:#696969,back:#FFFFFF
+
+
+# Asm Editor files
+font.monospace.asm=LXGW WenKai Mono
+font.acpmonofontname.asm=LXGW WenKai Mono
+font.acppropfontname.asm=LXGW WenKai Mono
+style.asm.32=font:LXGW WenKai Mono,size:18,fore:#000000,back:#FFFFFF
+style.asm.1=font:LXGW WenKai Mono,size:18,fore:#618181,back:#FFFFFF
+style.asm.2=font:LXGW WenKai Mono,size:18,fore:#FF0000,back:#FFFFFF
+style.asm.3=font:LXGW WenKai Mono,size:18,fore:#7F007F,back:#FFFFFF
+style.asm.4=font:LXGW WenKai Mono,size:18,fore:#000000,back:#FFFFFF
+style.asm.5=font:LXGW WenKai Mono,size:18,fore:#000000,back:#FFFFFF
+style.asm.6=font:LXGW WenKai Mono,size:18,fore:#0000FF,back:#FFFFFF
+style.asm.7=font:LXGW WenKai Mono,size:18,fore:#0000FF,back:#FFFFFF
+style.asm.9=font:LXGW WenKai Mono,size:18,fore:#0000FF,back:#FFFFFF
+style.asm.10=font:LXGW WenKai Mono,size:18,fore:#0000FF,back:#FFFFFF
+style.asm.11=font:LXGW WenKai Mono,size:18,fore:#007F00,back:#FFFFFF
+style.asm.12=font:LXGW WenKai Mono,size:18,fore:#7F007F,back:#FFFFFF
+style.asm.8=font:LXGW WenKai Mono,size:18,fore:#46AA03,back:#FFFFFF
+
+
+# Editor Text files
+font.monospace.txt=LXGW WenKai Mono
+font.acpmonofontname.txt=LXGW WenKai Mono
+font.acppropfontname.txt=LXGW WenKai Mono
+style.txt.32=font:LXGW WenKai Mono,size:18,fore:#000000,back:#FFFFFF
+
+
